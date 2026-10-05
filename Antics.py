@@ -37,14 +37,13 @@ def tautogram(text):
 
 def isogram(word):
     '''checks for a word in which no letter of the alphabet occurs more than once, Dane Andreasen'''
-    for word in word:
-        word = word.lower()
+    word = word.lower()
 
-        for i in range(len(word)):
-            if word[i] in word[i + 1:]:
-                return False
+    for i in range(len(word)):
+        if word[i] in word[i + 1:]:
+            return False
             
-        return True
+    return True
 
 def palindrome():
     word = input("Enter a word: ")
