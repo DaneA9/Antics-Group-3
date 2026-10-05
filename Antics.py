@@ -23,3 +23,28 @@ def abecedarian(word):
 def doubloon(word):
 	word = word.lower() 
     return len(set(word)) == 0.5*len(word)
+
+
+def palindrome():
+    word = input("Enter a word: ")
+    if word == word[::-1]:
+        print(f"{word} is a palindrome.")
+    else:
+        print(f"{word} is not a palindrome.")
+
+def pangram():
+    word =  input("Enter a word: ")
+    alf = "abcdefghijklmnopqrstuvwxyz"
+    test = False
+    if len(word) < 26:
+        print(f"{word} is not a pangram.")
+    else:
+        for letter in alf:
+            if letter not in word.lower():
+                test = True
+                break
+
+        if test:
+            print(f"{word} is not a pangram.")
+        else:
+            print(f"{word} is a pangram.")
