@@ -25,7 +25,6 @@ def doubloon(word):
 	word = word.lower() 
     return len(set(word)) == 0.5*len(word)
 
-
 def tautogram(text):
     first_letter = text[0][0].lower()
 
