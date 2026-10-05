@@ -41,6 +41,8 @@ def isogram(word):
         for i in range(len(word)):
             if word[i] in word[i + 1:]:
                 return ("not an isogram")
+            
+        return("is a isogram")
 
 def palindrome():
     word = input("Enter a word: ")
