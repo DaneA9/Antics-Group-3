@@ -22,27 +22,29 @@ def abecedarian(word):
 	word = word.lower()
 	return word == "".join(sorted(word))
 def doubloon(word):
-	word = word.lower() 
+    word = word.lower() 
     return len(set(word)) == 0.5*len(word)
 
 def tautogram(text):
+    '''checks for a text in which all words start with the same letter, Dane Andreasen'''
     first_letter = text[0][0].lower()
 
     for word in text:
         if word[0].lower() != first_letter:
-            return ("not a tautogram")
+            return False
 
-    return ("is a tautogram")
+    return True
 
 def isogram(word):
+    '''checks for a word in which no letter of the alphabet occurs more than once, Dane Andreasen'''
     for word in word:
         word = word.lower()
 
         for i in range(len(word)):
             if word[i] in word[i + 1:]:
-                return ("not an isogram")
+                return False
             
-        return("is a isogram")
+        return True
 
 def palindrome():
     word = input("Enter a word: ")
