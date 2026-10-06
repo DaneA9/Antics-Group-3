@@ -45,6 +45,15 @@ def isogram(word):
             
     return True
 
+def palindrome(word):
+     word = word.lower()
+     return word == word[::-1]
+
+def pangram(sentence):
+     sentence = sentence.lower()
+     return len(set(sentence.replace(" ",""))) == 26
+
+'''
 def palindrome():
     word = input("Enter a word: ")
     if word == word[::-1]:
@@ -68,3 +77,4 @@ def pangram():
             print(f"{word} is not a pangram.")
         else:
             print(f"{word} is a pangram.")
+            '''
