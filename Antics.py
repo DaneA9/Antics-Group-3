@@ -55,24 +55,19 @@ def pangram(sentence):
 
 '''
 def palindrome(word):
-    if word == word[::-1]:
-        print(f"{word} is a palindrome.")
+    if word.lower() == word[::-1]:
+        return True
     else:
-        print(f"{word} is not a palindrome.")
+        return False
 
 def pangram(word):
     alf = "abcdefghijklmnopqrstuvwxyz"
     test = False
     if len(word) < 26:
-        print(f"{word} is not a pangram.")
+        Return test
     else:
         for letter in alf:
             if letter not in word.lower():
                 test = True
                 break
-
-        if test:
-            print(f"{word} is not a pangram.")
-        else:
-            print(f"{word} is a pangram.")
-            '''
+    return test
