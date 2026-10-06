@@ -54,15 +54,13 @@ def pangram(sentence):
      return len(set(sentence.replace(" ",""))) == 26
 
 '''
-def palindrome():
-    word = input("Enter a word: ")
+def palindrome(word):
     if word == word[::-1]:
         print(f"{word} is a palindrome.")
     else:
         print(f"{word} is not a palindrome.")
 
-def pangram():
-    word =  input("Enter a word: ")
+def pangram(word):
     alf = "abcdefghijklmnopqrstuvwxyz"
     test = False
     if len(word) < 26:
